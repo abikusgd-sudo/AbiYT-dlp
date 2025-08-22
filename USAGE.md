@@ -1,33 +1,42 @@
-# AbikusWebsite - Usage Guide
 
-AbikusWebsite is the official hub for all AbikusSudoTM projects.  
-It provides a simple and modern interface for navigating our repositories and accessing project information.
+> I will double text, **i didn't maked it up yet.**
+> **Wait for updates.**
 
-## Requirements
-- Python 3.8 or higher
-- Flask (for local testing)
+# [**AbiYT-dlp**](https://github.com/abikusgd-sudo/AbiYT-dlp)
+[AbiYT-dlp](https://github.com/abikusgd-sudo/AbiYT-dlp) is a [Python](https://www.python.org/)-based tool for - downloading videos from [**YouTube**](https://youtu.be).
+It supports fast downloads of single videos, playlists, and entire channels.
+Additional features include format conversion, proxy support, and smooth integration with other tools.
 
-## Running Locally
-1. Clone the repository:
-   git clone https://github.com/abikusgd-sudo/AbikusWebsite
-2. Move into the project directory:
-   cd AbikusWebsite
-3. Run the test server:
-   python test.py
-4. Open your browser at:
-   http://127.0.0.1:5000
+## Basic Usage
+Run the executable from the folder where it was built:
 
-## Project Structure
-- html.html → Main page with project navigation
-- css.css → Global styles
-- js.js → Client-side scripts
-- logo_l.jpg / logo_d.jpg → Light and dark theme logos
-- test.py → Local Flask server for testing
+abiyt-dlp <URL>
 
-## Deployment
-You can host AbikusWebsite on:
-- GitHub Pages (static version)
-- Any web server supporting Python/Flask
+Example:
+abiyt-dlp https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
-## License
-This project is distributed under the MIT License.
+## Environment Variable
+You can also pass the URL through an environment variable:
+
+set download_link=https://www.youtube.com/watch?v=dQw4w9WgXcQ
+abiyt-dlp %download_link%
+
+## Common Options
+- --format <id>  
+  Select video/audio format.
+- --proxy <url>  
+  Use a proxy for downloading.
+- --output <path>  
+  Define output file or directory.
+- --extract-audio  
+  Download and convert video to audio.
+
+## Playlist Example
+abiyt-dlp https://www.youtube.com/playlist?list=PL1234567890
+
+## Channel Example
+abiyt-dlp https://www.youtube.com/@channel_name
+
+## Help
+For a full list of options, run:
+abiyt-dlp --help
